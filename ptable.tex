@@ -1,0 +1,77 @@
+\documentclass[12pt,landscape,a4paper]{article}
+
+\usepackage[left=0.3cm,right=0.5cm,top=2cm,bottom=0.5cm]{geometry}
+
+\newcommand\sk[2]{#1.#2}
+
+\newcounter{skupina}
+\newcommand\SK{%
+	\stepcounter{skupina}%
+	& \makebox[1cm]{\theskupina} %
+}
+
+\newcommand\el[1]{%
+	\rule[-18pt]{0cm}{48pt}% #1
+}
+
+\newcommand\emptyColumns[1]{%
+	\multicolumn{#1}{c|}{~}%
+}
+
+\newcommand\perioda[1]{%
+	\multicolumn{1}{|c|}{#1}%
+}
+
+\setlength{\doublerulesep}{2pt}
+
+\begin{document}
+
+\begin{tabular}{c*{19}{c|}}
+\hline \perioda{\rule[-6pt]{0cm}{20pt}}
+\SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK \SK
+\\
+\cline{2-19} \perioda{\rule[-6pt]{0cm}{20pt}}
+	& \sk{I}{A} & \sk{II}{A} 
+		& \sk{III}{B} & \sk{IV}{B} & \sk{V}{B} & \sk{VI}{B}
+		& \sk{VII}{B} & \multicolumn{3}{c|}{\sk{VIII}{B}}
+		& \sk{I}{B} & \sk{II}{B}
+	& \sk{III}{A} & \sk{IV}{A} & \sk{V}{A} & \sk{VI}{A}
+	& \sk{VII}{A} & \sk{VIII}{A}
+	\\
+\hline \vspace{-12pt} \\
+\cline{1-2}\cline{19-19}
+	\perioda{1} & \el{H} & \emptyColumns{16} & \el{He}  \\
+\cline{1-3}\cline{14-19}
+	\perioda{2} & \el{Li} & \el{Be} & \emptyColumns{10} & \el{B} & \el{C} & \el{N} & \el{O} & \el{F} & \el{Ne} \\
+\cline{1-3}\cline{14-19}
+	\perioda{3} & \el{Na} & \el{Mg} & \emptyColumns{10} & \el{Al} & \el{Si} & \el{P} & \el{S} & \el{Cl} & \el{Ar} \\
+\hline
+	\perioda{4} & \el{K} & \el{Ca} & \el{Sc} & \el{Ti} & \el{V} & \el{Cr} & \el{Mn} & \el{Fe} & \el{Co} 
+		& \el{Ni} & \el{Cu} & \el{Zn} & \el{Ga} & \el{Ge} & \el{As} & \el{Se} & \el{Br} & \el{Kr} \\
+\hline
+	\perioda{5} & \el{Rb} & \el{Sr} & \el{Y} & \el{Zr} & \el{Nb} & \el{Mo} & \el{Tc} & \el{Ru} & \el{Rh} 
+		& \el{Pd} & \el{Ag} & \el{Cd} & \el{In} & \el{Sn} & \el{Sb} & \el{Te} & \el{I} & \el{Xe} \\
+\hline
+	\perioda{6} & \el{Cs} & \el{Ba} & \multicolumn{1}{c||}{\el{La}} & \el{Hf} & \el{Ta} & \el{W} & \el{Re} & \el{Os} & \el{Ir} 
+		& \el{Pt} & \el{Au} & \el{Hg} & \el{Tl} & \el{Pb} & \el{Bi} & \el{Po} & \el{At} & \el{Rn} \\
+\hline
+	\perioda{7} & \el{Fr} & \el{Ra} & \multicolumn{1}{c|||}{\el{Ac}} 
+		& \el{Rf} & \el{Db} & \el{Sg} & \el{Bh} & \el{Hs} & \el{Mt} & \el{Ds} & \el{Rg} \\
+\cline{1-12}
+% & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} & \el{} \\
+\\
+
+\cline{5-18}
+	\multicolumn{4}{c||}{} &
+	\el{Ce} & \el{Pr} & \el{Nd} & \el{Pm} & \el{Sm} & \el{Eu} & \el{Gd} & \el{Tb} 
+		& \el{Dy} & \el{Ho} & \el{Er} & \el{Tm} & \el{Yb} & \el{Lu} \\
+\cline{5-18}
+	\multicolumn{4}{c|||}{} &
+	\el{Th} & \el{Pa} & \el{U} & \el{Np} & \el{Pu} & \el{Am} & \el{Cm} & \el{Bk} 
+		& \el{Cf} & \el{Es} & \el{Fm} & \el{Md} & \el{No} & \el{Lr} \\
+\cline{5-18}
+	
+
+\end{tabular}
+
+\end{document}
